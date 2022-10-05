@@ -1,0 +1,8 @@
+
+1. For reading you use "read".
+2. For printing you use "show".
+3. The assignment operator is <-.
+4. The equality operator is =.
+5. To convert integer to string you use text().
+6. Reserved words include iff, eliff.
+7. Identifiers must start with a letter.
