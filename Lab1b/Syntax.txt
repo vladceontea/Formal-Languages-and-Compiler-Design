@@ -1,0 +1,43 @@
+Syntax:
+
+program ::= stmtlist
+
+stmtlist ::= stmt | stmt "." stmtlist
+
+stmt ::= simplstmt | structstmt | declaration
+
+declaration ::= IDENTIFIER ":" type
+
+type  ::= type1 | arraydecl
+
+type1 ::= "char" | "int" | "string" | "bool"
+
+arraydecl ::= "list" type1 "[" numbers "]"
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "<-" expression
+
+expression ::= expression math term | term
+
+math ::= "+" | "-" | "*" | "/" | "//" | "%"
+
+term ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "read" "(" IDENTIFIER ")" | "show" "(" IDENTIFIER ")"
+
+structstmt ::= ifstmt | whilestmt
+
+ifstmt ::= "if" "(" conditionlist ")" ":"  stmtlist [ {"elif" stmtlist} "else" stmtlist]
+
+whilestmt ::= "while" "(" conditionlist ")" ":" stmtlist
+
+forstmt ::= "for" "(" assignstmt "," condition "," expression ") ":" stmtlist
+
+conditionlist ::= condition | condition operation condition
+
+condition ::= expression relation expression
+
+relation ::= "<" | "<=" | "=" | "<>" | ">=" | ">"
+
+operation ::= "and" | "or"
