@@ -37,7 +37,10 @@ class SymbolTable:
         return pos, pos2
 
     def to_string(self):
-        print("Symbol Table")
+
+        table = "Symbol Table\n"
         for i in range(self.capacity):
             if len(self.table[i]) != 0:
-                print(str(i) + " " + str(self.table[i]))
+                table += str(i) + " " + str(self.table[i]) + "\n"
+
+        return table
