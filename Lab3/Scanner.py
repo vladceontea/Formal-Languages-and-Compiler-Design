@@ -39,7 +39,6 @@ class Scanner:
         separator_string = separator_string[:-1] + ")"
         lines = file.readlines()
         for number, line in enumerate(lines):
-            line_length = 0
             index = 0
             words = line.split(' ')
             words = list(filter(('').__ne__, words))
@@ -62,8 +61,8 @@ class Scanner:
                 elif word == '\n':
                     break
                 else:
-                    print("Lexical error at line " + str(number) + ", column " + str(line_length+1) + ": " + str(line))
-                line_length += len(word)
+                    print("Lexical error at line " + str(number) + ": " + str(word))
+                    print(line)
 
     def is_identifier(self, word):
         allowed = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
