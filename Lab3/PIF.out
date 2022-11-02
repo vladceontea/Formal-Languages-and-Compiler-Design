@@ -1,6 +1,7 @@
 PIF Table
 read -1
 ( -1
+identifier (1, 0)
 ) -1
 . -1
 read -1
@@ -25,6 +26,7 @@ identifier (3, 0)
 ) -1
 : -1
 identifier (12, 0)
+<- -1
 identifier (1, 0)
 . -1
 elif -1

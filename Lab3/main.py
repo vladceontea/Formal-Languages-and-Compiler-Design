@@ -3,7 +3,7 @@ from SymbolTable import SymbolTable
 from Scanner import Scanner
 
 symbol_table = SymbolTable(16)
-scanner = Scanner(symbol_table, 'p1err.py')
+scanner = Scanner(symbol_table, 'p1.py')
 scanner.scan()
 
 
