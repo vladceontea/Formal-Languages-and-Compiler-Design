@@ -38,7 +38,6 @@ class Scanner:
             separator_string += "|"
         separator_string = separator_string[:-1] + ")"
         lines = file.readlines()
-        #lines = [line for line in file.readlines() if line.strip()]
         for number, line in enumerate(lines):
             line_length = 0
             index = 0
@@ -63,7 +62,7 @@ class Scanner:
                 elif word == '\n':
                     break
                 else:
-                    print("Lexical error at line " + str(number) + ", column " + str(line_length + index) + ": " + str(line))
+                    print("Lexical error at line " + str(number) + ", column " + str(line_length+1) + ": " + str(line))
                 line_length += len(word)
 
     def is_identifier(self, word):
