@@ -1,10 +1,10 @@
 
-read(*a).
+read(&a).
 read(b).
 read(c).
 
 if (a >= b and a >= c):
-    maxim -> a.
+    maxim ^ a.
 elif (b >= a and b >= c):
     maxim <- b.
 else:

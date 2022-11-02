@@ -1,0 +1,15 @@
+Scanner
+
+Fields:
+    - symbol_table: The symbol table used to store the constants and identifiers, represented as a hash table
+    - pif_table: The PIF table used to store all the tokens found in the code, represented as a list of tuples with the value and the symbol table position
+    - token_list: The list of specials tokens in the language
+    - separator_list: The list of written separators and operators in the language, which can be written next to other elements
+    - file: The file that is scanned
+
+Methods:
+    - read_tokens: reads all the special tokens in the language
+    - read_word_separators: reads the written separators and operators in the language
+    - is_identifier: checks if the word is a valid identifier
+    - is_constant: checks if the word is a valid constant
+    - scan: the actual scanning function, which creates the symbol table and pif table based on the read file; it checks every word in the source code and decides whether it is a valid token or not, in which case it prints a message and the line
