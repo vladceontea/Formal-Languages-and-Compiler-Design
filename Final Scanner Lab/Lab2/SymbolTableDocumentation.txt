@@ -1,0 +1,13 @@
+Symbol Table
+
+The symbol table is represented as a hash table with separate chaining as collision resolution,
+
+Fields:
+	- capacity: the positions of the hash table
+	- table: the actual storage of the values implemented as a list of lists
+
+Methods:
+	- hash: the hash function of the symbol table; if computes the mod value (in relation tot the capacity) of the total ascii codes of the characters of the symbol to be added
+	- add: adds a new element to the symbol table; adds the element to the list of the computed hash position
+	- search: looks for the position at which a certain element is found; return a tuple of the position of the list and the position inside the list
+	- to_string: represents the symbol table as a string for viewing
