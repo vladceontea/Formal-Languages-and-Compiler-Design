@@ -2,7 +2,7 @@ Finite Automata
 
 Fields:
     - set_of_states: the set of states that appear in the FA
-    - alphabet: the alphabet that
+    - alphabet: the alphabet of the FA
     - transition: all the transitions that appear in the FA
     - initial_state: the initial state of the FA at the start
     - set_of_final_states: the possible final states of the FA at the end
@@ -14,7 +14,7 @@ Methods:
     - print_initial_state: prints the initial state
     - print_set_of_final_states: prints the set of final states
     - print_transitions: prints all the transitions in the "(q,a)->p" format
-    - check_dfa: checks if the FA is a DFA, that is from a state one transition only leads to one other state
+    - check_dfa: checks if the FA is a DFA, so whether from a state one particular transition only leads to one other state
     - check_sequence: checks if the given sequence is accepted by the FA, so it can be formed by a certain sequence of transitions starting from the initial one and ending in one of the final ones
     - read_fa: reads the details of the FA from the given file in the order: set of states, alphabet, initial state, set of final states, transitions
 
