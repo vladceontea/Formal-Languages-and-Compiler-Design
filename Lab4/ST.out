@@ -1,0 +1,9 @@
+Symbol Table
+0 ['0', '"prime_"', '"Prime_"']
+1 ['1']
+2 ['2']
+4 ['"Not_"', '"a_"']
+9 ['i']
+12 ['"number_"']
+13 ['prime', '"number"']
+14 ['n']
