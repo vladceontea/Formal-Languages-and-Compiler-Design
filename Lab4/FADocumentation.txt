@@ -9,7 +9,7 @@ Fields:
     - file: the name of the file that contains the rules of the FA
 
 Methods:
-    - print_set_of_states: prints the list of set of states
+    - print_set_of_states: prints the set of all states
     - print_alphabet: prints the alphabet
     - print_initial_state: prints the initial state
     - print_set_of_final_states: prints the set of final states
@@ -19,4 +19,11 @@ Methods:
     - read_fa: reads the details of the FA from the given file in the order: set of states, alphabet, initial state, set of final states, transitions
 
 Format of FA.in file:
-    - 
+    - state ::= "p" | "q" | "r"
+    - states ::= state {" " state}
+    - element ::= "a" | "b"
+    - alphabet ::= element {" " element}
+    - initial_state ::= state
+    - final_states ::= state {" " state}
+    - transition ::= state " " element " " state
+    - transitions ::= transition {"\n" transition}

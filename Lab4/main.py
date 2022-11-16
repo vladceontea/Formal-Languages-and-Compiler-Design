@@ -19,13 +19,17 @@ def print_choice():
     print("---------------")
     print("1. Run FA")
     print("2. Run scanner with FA")
-    print("0. Exit")
     print("---------------")
 
 
 if __name__ == "__main__":
     print_choice()
-    choice = int(input("Please input your choice: "))
+    choice = input("Please input your choice: ")
+    while not choice.isnumeric():
+        print("Not a valid option")
+        choice = input("Please input your choice: ")
+
+    choice = int(choice)
     if choice == 1:
         fa = FiniteAutomata('FA.in')
         fa.read_fa()
@@ -81,3 +85,4 @@ if __name__ == "__main__":
         st.truncate(0)
         st.write(str(scanner.symbol_table.to_string()))
         st.close()
+
