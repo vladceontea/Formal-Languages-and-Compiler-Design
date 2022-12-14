@@ -1,0 +1,9 @@
+ID: 0 -> Element: S 1, parent -1 ,left: -1 ,right: -1
+ID: 1 -> Element: a, parent 0 ,left: -1 ,right: 2
+ID: 2 -> Element: S 2, parent 0 ,left: 1 ,right: 6
+ID: 3 -> Element: a, parent 2 ,left: -1 ,right: 4
+ID: 4 -> Element: S 3, parent 2 ,left: 3 ,right: -1
+ID: 5 -> Element: c, parent 4 ,left: -1 ,right: -1
+ID: 6 -> Element: b, parent 0 ,left: 2 ,right: 7
+ID: 7 -> Element: S 3, parent 0 ,left: 6 ,right: -1
+ID: 8 -> Element: c, parent 7 ,left: -1 ,right: -1

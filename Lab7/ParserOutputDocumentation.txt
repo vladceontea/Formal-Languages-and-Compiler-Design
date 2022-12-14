@@ -1,0 +1,22 @@
+TableElement
+
+- a class that stores one element of the table and its details
+
+Fields:
+    - element: the value of the element
+    - parent: the parent of the element
+    - left: the element placed on the left
+    - right: the element placed on the left
+    - pos: the id of the element, its position in the work stack
+
+
+ParserOutput
+
+Fields:
+    - parser: the parser for which it transforms the work stack in a table
+    - table: the table containing the elements
+    - fileName: the file name where the table is printed
+
+Methods:
+    - start: the main function that iterates over the stack and prints the values to the file
+    - parse: it takes the node at the top (which is always a nonterminal), adds it to the table and analyzes its corresponding production elements to add them further

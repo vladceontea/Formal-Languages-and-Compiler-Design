@@ -1,0 +1,21 @@
+Grammar
+
+Fields:
+    - N: the set of nonterminals
+    - E: the set of terminals
+    - S: the starting symbol, which is a nonterminal
+    - P: the finite set of productions
+
+Methods:
+    - checkCGF: checks if the given grammar is a context free grammar, so it can model a programming language
+    - parseLine: reads and interprets a line from the read grammar file
+    - fromFile: reads the grammar from a file
+    - parseRules: interprets the production that are read from the given file
+    - splitRhs: splits the right terms of a production
+    - isNonTerminals: checks if a value is a valid nonterminal
+    - isTerminal: checks if a value is a valid terminal
+    - getProductionsForNonTerminal: returns the list of productions for a valid nonterminal
+    - printProductionsForNonTerminalL prints the list of production for a nonterminal
+    - printNonTerminals: prints the list of nonterminals
+    - printTerminals: prints the list of terminals
+    - printProductions: prints all the productions of the grammar

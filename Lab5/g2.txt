@@ -1,0 +1,26 @@
+N == { program; stmtlist; stmt; declaration; type; type1; arraydecl; simplstmt; assignstmt; expression; math; term; iostmt; structstmt; ifstmt; whilestmt; forstmt; conditionlist; condition; relation; operation}
+E == { char; int; string; bool; list; identifier; constant; read; show; <-; +; -; *; /; //; %; (; ); :; while; for; if; elif; else; <; <=; =; <>; >=; >; and; or}
+S == program
+P == {
+    program -> stmtlist;
+    stmtlist -> stmt stmtlist | stmt;
+    stmt -> simplstmt | structstmt | declaration;
+    declaration -> identifier : type;
+    type -> type1 | arraydecl;
+    type1 -> char | int | string | bool;
+    arraydecl -> list type1 [ numbers ];
+    simplstmt -> iostmt | assignstmt;
+    assignstmt -> identifier <- expression;
+    expression -> term math expression | term;
+    math -> + | - | * | / | // | %;
+    term -> identifier | constant | ( expression ) ;
+    iostmt -> read ( identifier ) | show ( identifier ) | show ( expression );
+    structstmt -> ifstmt | whilestmt | forstmt;
+    ifstmt -> if ( conditionlist ) : stmtlist elif ( conditionlist ) : stmtlist else : stmt;
+    whilestmt -> while ( conditionlist ) : stmtlist;
+    forstmt -> for ( assignstmt , condition , expression ) : stmtlist;
+    conditionlist -> condition | condition operation condition;
+    condition -> expression relation expression;
+    relation -> < | <= | = | <> | >= | >;
+    operation -> and | or
+}

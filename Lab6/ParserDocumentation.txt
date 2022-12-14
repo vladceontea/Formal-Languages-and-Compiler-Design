@@ -1,0 +1,29 @@
+Configuration Class
+
+- a class that helps keep the information necessary for the parser
+
+Fields:
+    - state: the dictionary containing the valid states
+    - state["q"]: the normal state, if everything goes as it should
+    - state["f"]: the success state, if the end has been reached
+    - state["b"]: the back state, if a wrong path has been chosen
+    - state["e"]: the error state, if success cannot be reached
+    - index: the index of the parsing element
+    - work_stack: the stack that is being built by analyzing elements
+    - input_stack: the stack that dictates the next analyzed element
+
+
+Parser
+
+Fields:
+    - grammar: the grammar of the language
+    - configuration : the configuration class used in helping the parsing
+
+Methods:
+    - expand: if at the top of the stack there is a nonterminal, this operation places it in the work stack, replacing it in the input stack with the first production
+    - advance: if at the top of the stack there is a valid terminal for the given sequence, it is pushed from the input stack to the work stack and the index is incremented
+    - momentary_insuccess: if at the top of the stack there is a valid terminal for the given sequence, it enters the back state
+    - another_try: when in the back state and at the top of the input stack there is a nonterminal, this operation brings it back to the normal one and replaces the nonterminal with its next valid production
+    - back: when in the back state and at the top of the input stack there is a terminal, this operation brings it back to the normal one and brings the terminals back in the input stack, while the index is decremented
+    - success: the input stack is empty and the work stack contains the given sequence
+    - run: the function for the parsing algorithm
