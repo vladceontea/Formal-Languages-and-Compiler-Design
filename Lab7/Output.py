@@ -3,7 +3,7 @@ from Parser import Parser
 
 class TableElement:
     def __init__(self, element, pos):
-        self.element = element #production elem ('S 1', 0)
+        self.element = element  # production elem ('S 1', 0)
         self.parent = -1
         self.left = -1
         self.right = -1
@@ -13,7 +13,7 @@ class TableElement:
         return "ID: " + str(self.pos) + " -> Element: " + str(self.element) + ", parent " + str(self.parent) + " ,left: " + str(self.left) + " ,right: " + str(self.right)
 
 
-class ParserOutput:
+class Output:
     def __init__(self, parser: Parser, fileName):
         self.parser = parser
         self.table = {}

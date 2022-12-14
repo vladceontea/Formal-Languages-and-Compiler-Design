@@ -1,6 +1,6 @@
 from Grammar import Grammar
 from Parser import Parser
-from ParserOutput import ParserOutput
+from Output import Output
 
 
 def readPif(Filename):
@@ -62,7 +62,7 @@ def test_parser():
 
 if __name__ == '__main__':
 
-    #test_parser()
+    test_parser()
 
     grammar = Grammar.fromFile('g1.txt')
     parser = Parser(grammar)
@@ -72,5 +72,5 @@ if __name__ == '__main__':
     work_stack = parser.run(seq)
     if work_stack is not None:
         print("Table/Tree representation")
-        parserOutput = ParserOutput(parser, 'out1.txt')
-        parserOutput.start(work_stack)
+        output = Output(parser, 'out1.txt')
+        output.start(work_stack)

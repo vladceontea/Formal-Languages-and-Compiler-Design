@@ -10,7 +10,7 @@ Fields:
     - pos: the id of the element, its position in the work stack
 
 
-ParserOutput
+Output
 
 Fields:
     - parser: the parser for which it transforms the work stack in a table

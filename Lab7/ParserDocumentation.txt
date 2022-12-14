@@ -4,7 +4,7 @@ Configuration Class
 
 Fields:
     - state: the dictionary containing the valid states
-    - state["q"]: the normal state, if everything goes as it should
+    - state["q"]: the normal state, as the parser advances normally
     - state["f"]: the success state, if the end has been reached
     - state["b"]: the back state, if a wrong path has been chosen
     - state["e"]: the error state, if success cannot be reached
