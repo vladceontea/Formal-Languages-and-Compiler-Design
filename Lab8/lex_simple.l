@@ -24,14 +24,13 @@ IDENTIFIER [a-zA-Z][a-zA-Z0-9_]*
 "or" 		{printf("Reserved word: %s\n", yytext);}
 "read" 		{printf("Reserved word: %s\n", yytext);}
 "show" 		{printf("Reserved word: %s\n", yytext);}
-"int" 		{printf("Reserved word: %s\n", yytext);}
-"char" 		{printf("Reserved word: %s\n", yytext);}
-"string"	{printf("Reserved word: %s\n", yytext);}
 "list" 		{printf("Reserved word: %s\n", yytext);}
 
 
 "("		{printf("Separator: %s\n", yytext);}
 ")"		{printf("Separator: %s\n", yytext);}
+"["		{printf("Separator: %s\n", yytext);}
+"]"		{printf("Separator: %s\n", yytext);}
 ";"		{printf("Separator: %s\n", yytext);}
 ":"		{printf("Separator: %s\n", yytext);}
 "."		{printf("Separator: %s\n", yytext);}
@@ -45,7 +44,7 @@ IDENTIFIER [a-zA-Z][a-zA-Z0-9_]*
 "%"		{printf("Operator: %s\n", yytext);}
 "="		{printf("Operator: %s\n", yytext);}
 "<-"		{printf("Operator: %s\n", yytext);}
-"!="		{printf("Operator: %s\n", yytext);}
+"<>"		{printf("Operator: %s\n", yytext);}
 "<"		{printf("Operator: %s\n", yytext);}
 ">"		{printf("Operator: %s\n", yytext);}
 "<="		{printf("Operator: %s\n", yytext);}
